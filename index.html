@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+            canvas {
+                padding: 0;
+                margin: auto;
+                display: block;
+                border:5px solid #000000;
+            }
+        
+    </style>
+</head>
+
+
+<body>  
+    <canvas id="myCanvas">
+        Your browser does not support the canvas element.
+    </canvas>
+    <p id="demo" hidden>
+    Coordinates:
+    </p>
+    
+    <!-- script needs to be below canvas to work -->
+    <script src="myJavascript/loadResources.js"></script>
+    <script src="myJavascript/StartGame.js"></script>
+    <script src="myJavascript/ComponentObject.js"></script>
+    <script src="myJavascript/gameController.js"></script>
+    <script src="myJavascript/gameMenu.js"></script>
+    <script src="myJavascript/gamePlay.js"></script>
+    <script src="myJavascript/gameSound.js"></script>
+
+    <script>
+        resources.load([
+            'assets/StarySky.png',
+            'assets/menuObjects.png',
+            'assets/Credits.png',
+            'assets/HowTo.png',
+            'assets/winScreen.png',
+            'assets/AsteroidSheet.png',
+            'assets/spaceship/exploded.png',
+            'assets/spaceship/flyFowardf1.png',
+            'assets/spaceship/flyFowardf2.png',
+            'assets/spaceship/flyLeftf1.png',
+            'assets/spaceship/flyLeftf2.png',
+            'assets/spaceship/flyRightf1.png',
+            'assets/spaceship/flyRightf2.png'
+        ]);
+        resources.onReady(startGame);
+    </script>
+
+</body>
+</html>
